@@ -1,2 +1,2 @@
 # Pencarian Koneksi Penting
- Algoritma untuk mencari koneksi jaringan antar komputer mana yang sifatnya penting
+ Algoritma untuk mencari jalur lari mana yang sifatnya penting

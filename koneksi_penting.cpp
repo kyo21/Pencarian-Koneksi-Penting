@@ -36,6 +36,7 @@ int main() {
 
     return 0;
 }
+}
 void jalur_penting(map<string, string> path) {
     set<string> koneksi_penting;
 

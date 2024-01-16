@@ -9,7 +9,7 @@ using namespace std;
 
 map<string, string> path;
 
-void jalur_penting(map<string, string> path){
+void jalur_penting(map<string, string> path);
 
 int main() {
     int n;
@@ -36,7 +36,7 @@ int main() {
 
     return 0;
 }
-}
+
 void jalur_penting(map<string, string> path) {
     set<string> koneksi_penting;
 
@@ -44,15 +44,21 @@ void jalur_penting(map<string, string> path) {
         string start = entry.first;
         string end = entry.second;
 
+
         if ((path[end] == start || koneksi_penting.find(end) != koneksi_penting.end()) && (start == "A" || start == "B" || start == "C")) {
             koneksi_penting.insert(start);
             koneksi_penting.insert(end);
         }
     }
 
-}
 
-int main(){
-
-return 0;
+    if (!koneksi_penting.empty()) {
+        cout << "Jalur koneksi penting adalah: ";
+        for (const auto &node : koneksi_penting) {
+            cout << node << " ";
+        }
+        cout << "adalah koneksi penting" << endl;
+    } else {
+        cout << "Tidak ada jalur koneksi penting" << endl;
+    }
 }

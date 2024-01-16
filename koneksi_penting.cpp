@@ -36,6 +36,18 @@ int main() {
 
     return 0;
 }
+void jalur_penting(map<string, string> path) {
+    set<string> koneksi_penting;
+
+    for (const auto &entry : path) {
+        string start = entry.first;
+        string end = entry.second;
+
+        if ((path[end] == start || koneksi_penting.find(end) != koneksi_penting.end()) && (start == "A" || start == "B" || start == "C")) {
+            koneksi_penting.insert(start);
+            koneksi_penting.insert(end);
+        }
+    }
 
 }
 
